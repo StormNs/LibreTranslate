@@ -40,5 +40,8 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi \
   fi
 
+# RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
+# RUN ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
+
 EXPOSE 5000
 ENTRYPOINT [ "./venv/bin/libretranslate", "--host", "0.0.0.0" ]
